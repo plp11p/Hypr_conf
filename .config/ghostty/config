@@ -23,11 +23,10 @@ title = "Terminal"
 
 window-padding-balance = true
 
-#quick-terminal-animation-duration = 0.5
-
-cursor-style = "block"
+cursor-style = "underline"
 cursor-style-blink = false
 cursor-opacity = 0.5
+
 
 shell-integration-features = "no-cursor"
 
