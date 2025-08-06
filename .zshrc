@@ -56,6 +56,7 @@ setopt hist_ignore_space        # не сохранять команды, нач
 # ──────────────────────────────────────────────
 # Zsh options
 # ──────────────────────────────────────────────
+source <(fzf --zsh)
 setopt autocd
 setopt interactivecomments
 setopt magicequalsubst
