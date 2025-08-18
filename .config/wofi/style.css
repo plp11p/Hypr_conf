@@ -52,8 +52,8 @@
 @define-color	crust-rgb  rgb(17, 17, 27);
 
 * {
-  font-family: 'Cascadia Code', monospace;
-  font-size: 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 22px;
 }
 
 /* Window */

@@ -1,8 +1,9 @@
-font="Cascadia Code"
-height=110
+font="JetBrains Mono 20"
+width=500
+height=300
 margin=15
 padding=0,15,25
-border-size=2
+border-size=3
 layer=overlay
 anchor=top-right
 

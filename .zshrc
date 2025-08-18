@@ -34,6 +34,7 @@ zinit light zsh-users/zsh-autosuggestions
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
 zinit light Aloxaf/fzf-tab
+zinit light hlissner/zsh-autopair
 
 # ──────────────────────────────────────────────
 # Powerlevel10k prompt
@@ -71,6 +72,10 @@ setopt NO_MENU_COMPLETE
 # ──────────────────────────────────────────────
 export TERMINAL=ghostty
 export BROWSER=firefox
+#alias fif='file=$(fzf --preview "bat --color=always {}") && [ -n "$file" ] && nvim "$file"'
+
+alias fif='file=$(fzf --preview "ls -l {} && echo && bat --color=always {}") && [ -n "$file" ] && nvim "$file"'
+
 
 # ──────────────────────────────────────────────
 # Key bindings
@@ -98,3 +103,5 @@ autoload -U select-word-style
 select-word-style bash
 
 ### End of Zinit's installer chunk
+#
+#
