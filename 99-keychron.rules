@@ -1,4 +1,0 @@
-# Keychron keyboards
-SUBSYSTEM=="usb", ATTRS{idVendor}=="3434", MODE="0666", GROUP="uucp"
-SUBSYSTEM=="hidraw", ATTRS{idVendor}=="3434", MODE="0666", GROUP="uucp"
-KERNEL=="hidraw*", ATTRS{idVendor}=="3434", MODE="0666", GROUP="uucp"
