@@ -1,8 +1,6 @@
 font-family = "JetBrains Mono"
 
-font-size = 20
-
-#background = #0F1114
+font-size = 24
 
 window-decoration = false
 

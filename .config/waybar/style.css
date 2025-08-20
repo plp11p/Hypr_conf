@@ -3,7 +3,7 @@
   border-radius: 0;
   font-family: "JetBrains Mono", "Font Awesome 6 Free", "Symbols Nerd Font";
   font-weight: bold;
-  font-size: 17px;
+  font-size: 20px;
   min-height: 0;
 }
 
@@ -86,7 +86,7 @@ tooltip {
   border-radius: 10px;
   margin-left: 10px;
   border-right: 0px;
-  font-size: 18px; /* Увеличенный шрифт */
+  font-size: 22px; /* Увеличенный шрифт */
   padding: 0px 25px;
   text-shadow: 0 0 0px #fab387;
 }

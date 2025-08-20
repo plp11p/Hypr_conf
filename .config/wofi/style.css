@@ -60,7 +60,7 @@
 window {
   margin: 0px;
   padding: 10px;
-  border: 2px solid @lavender;
+  border: 2px solid rgba(249, 226, 175, 0.56); /* Reduced from 0.8 to 0.56 (30% less) */
   border-radius: 8px;
   background-color: @base;
 }
@@ -101,11 +101,11 @@ window {
 
 #input image {
     border: none;
-    color: @red;
+    color: rgba(249, 226, 175, 0.7); /* Reduced contrast for input image */
 }
 
 #input * {
-  outline: 4px solid @red!important;
+  outline: 4px solid rgba(249, 226, 175, 0.42)!important; /* Reduced by 40% from 0.7 to 0.42 */
 }
 
 /* Text */
@@ -121,18 +121,19 @@ window {
 
 #entry arrow {
   border: none;
-  color: @lavender;
+  color: rgba(249, 226, 175, 0.7); /* Reduced contrast for arrow */
 }
 
 /* Selected Entry */
 #entry:selected {
-  border: 0.11em solid @lavender;
+  border: 0.11em solid rgba(249, 226, 175, 0.7); /* Reduced contrast for selected border */
 }
 
 #entry:selected #text {
-  color: @mauve;
+  color: rgba(249, 226, 175, 0.8); /* Slightly less contrast for selected text */
 }
 
 #entry:drop(active) {
-  background-color: @lavender!important;
+  background-color: rgba(249, 226, 175,
 }
+
