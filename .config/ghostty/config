@@ -8,10 +8,6 @@ window-decoration = false
 
 theme = catppuccin-mocha
 
-#theme = "Monokai Pro"
-
-#font-style-bold = "Cascadia Code"
-
 shell-integration = zsh
 
 background-blur = true
