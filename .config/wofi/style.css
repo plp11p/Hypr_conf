@@ -1,138 +1,149 @@
-@define-color	rosewater  #f5e0dc;
-@define-color	rosewater-rgb  rgb(245, 224, 220);
-@define-color	flamingo  #f2cdcd;
-@define-color	flamingo-rgb  rgb(242, 205, 205);
-@define-color	pink  #f5c2e7;
-@define-color	pink-rgb  rgb(245, 194, 231);
-@define-color	mauve  #cba6f7;
-@define-color	mauve-rgb  rgb(203, 166, 247);
-@define-color	red  #f38ba8;
-@define-color	red-rgb  rgb(243, 139, 168);
-@define-color	maroon  #eba0ac;
-@define-color	maroon-rgb  rgb(235, 160, 172);
-@define-color	peach  #fab387;
-@define-color	peach-rgb  rgb(250, 179, 135);
-@define-color	yellow  #f9e2af;
-@define-color	yellow-rgb  rgb(249, 226, 175);
-@define-color	green  #a6e3a1;
-@define-color	green-rgb  rgb(166, 227, 161);
-@define-color	teal  #94e2d5;
-@define-color	teal-rgb  rgb(148, 226, 213);
-@define-color	sky  #89dceb;
-@define-color	sky-rgb  rgb(137, 220, 235);
-@define-color	sapphire  #74c7ec;
-@define-color	sapphire-rgb  rgb(116, 199, 236);
-@define-color	blue  #89b4fa;
-@define-color	blue-rgb  rgb(137, 180, 250);
-@define-color	lavender  #b4befe;
-@define-color	lavender-rgb  rgb(180, 190, 254);
-@define-color	text  #cdd6f4;
-@define-color	text-rgb  rgb(205, 214, 244);
-@define-color	subtext1  #bac2de;
-@define-color	subtext1-rgb  rgb(186, 194, 222);
-@define-color	subtext0  #a6adc8;
-@define-color	subtext0-rgb  rgb(166, 173, 200);
-@define-color	overlay2  #9399b2;
-@define-color	overlay2-rgb  rgb(147, 153, 178);
-@define-color	overlay1  #7f849c;
-@define-color	overlay1-rgb  rgb(127, 132, 156);
-@define-color	overlay0  #6c7086;
-@define-color	overlay0-rgb  rgb(108, 112, 134);
-@define-color	surface2  #585b70;
-@define-color	surface2-rgb  rgb(88, 91, 112);
-@define-color	surface1  #45475a;
-@define-color	surface1-rgb  rgb(69, 71, 90);
-@define-color	surface0  #313244;
-@define-color	surface0-rgb  rgb(49, 50, 68);
-@define-color	base  #1e1e2e;
-@define-color	base-rgb  rgb(30, 30, 46);
-@define-color	mantle  #181825;
-@define-color	mantle-rgb  rgb(24, 24, 37);
-@define-color	crust  #11111b;
-@define-color	crust-rgb  rgb(17, 17, 27);
-
-* {
-  font-family: 'JetBrains Mono', monospace;
+/* ~/.config/wofi/style.css
+   Catppuccin (Mocha) theme for Wofi - Modified: No opacity, larger sizes
+   - Quick-swap variables at the top to change flavor
+*/
+/* ----------------------
+   Palette (Mocha)
+   ---------------------- */
+:root{
+  /* Base */
+  --cp-crust:   #11111b;
+  --cp-mantle:  #181825;
+  --cp-base:    #1e1e2e;
+  --cp-surface0:#313244;
+  --cp-surface1:#45475a;
+  --cp-surface2:#585b70;
+  /* Text */
+  --cp-overlay0:#6c7086;
+  --cp-overlay1:#7f849c;
+  --cp-overlay2:#9399b2;
+  --cp-subtext0:#a6adc8;
+  --cp-subtext1:#bac2de;
+  --cp-text:    #cdd6f4;
+  /* Accents */
+  --cp-rosewater:#f5e0dc;
+  --cp-flamingo: #f2cdcd;
+  --cp-pink:     #f5c2e7;
+  --cp-mauve:    #cba6f7;
+  --cp-peach:    #fab387; /* primary highlight used below */
+  --cp-maroon:   #eba0ac;
+  --cp-yellow:   #f9e2af;
+  --cp-green:    #a6e3a1;
+  --cp-teal:     #94e2d5;
+  --cp-sky:      #74c7ec;
+  --cp-blue:     #89b4fa;
+  --cp-lavender: #b4befe;
+}
+/* ----------------------
+   Window + container
+   ---------------------- */
+window {
+  background-color: rgba(30, 30, 46, 0.99) ;
+  margin: 15px;
+  padding: 18px;
+  border-radius: 18px; !important
+  color: var(--cp-text);
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 22px;
 }
-
-/* Window */
-window {
-  margin: 0px;
-  padding: 10px;
-  border: 2px solid @lavender;
-  border-radius: 8px;
-  background-color: @base;
-}
-
-/* Inner Box */
-#inner-box {
-  margin: 5px;
-  padding: 10px;
-  border: none;
-  background-color: @base;
-}
-
-/* Outer Box */
+/* outer frame */
 #outer-box {
-  margin: 5px;
-  padding: 10px;
-  border: none;
-  background-color: @base;
+  background-color: var(--cp-mantle);
+  border: 2px solid var(--cp-surface0);
+  padding: 12px;
+  border-radius: 18px;
 }
-
-/* Scroll */
-#scroll {
-  margin: 0px;
-  padding: 10px;
-  border: none;
-  background-color: @base;
-}
-
-/* Input */
+/* input (prompt) */
 #input {
-  margin: 5px 20px;
-  padding: 10px;
-  border: none;
-  border-radius: 0.1em;
-  color: @text;
-  background-color: @base;
+  margin: 12px 15px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  background-color: var(--cp-surface0);
+  color: var(--cp-subtext1);
+  border: 2px solid var(--cp-surface1);
+  outline: none;
+  font-size: 20px;
 }
-
-#input image {
-    border: none;
-    color: @red;
+/* scroll / entry list */
+#scroll {
+  max-height: 60vh;
+  margin-top: 15px;
+  padding-right: 12px;
+  background-color: var(--cp-mantle);
+  border-top: 0;
 }
-
-#input * {
-  outline: 4px solid @red!important;
+/* container for entries */
+#inner-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
 }
-
-/* Text */
-#text {
-  margin: 5px;
-  border: none;
-  color: @text;
-}
-
+/* a single entry (default state) */
 #entry {
-  background-color: @base;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 25px;
+  border-radius: 10px; /* removed pill shape */
+  background-color: var(--cp-surface0);
+  transition: background-color 120ms ease, transform 80ms ease;
+  color: var(--cp-text);
+  border: 2px solid var(--cp-surface1); /* match selected border thickness */
 }
 
-#entry arrow {
-  border: none;
-  color: @lavender;
-}
-
-/* Selected Entry */
+/* selected (focused) entry */
 #entry:selected {
-  border: 0.11em solid @lavender;
+  background-color: var(--cp-peach);
+  color: var(--cp-crust);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px var(--cp-surface2);
+  border: 2px solid var(--cp-peach); /* yellow border */
+  border-radius: 14px; /* match default shape */
 }
-
-#entry:selected #text {
-  color: @mauve;
+/* text inside entry */
+#text {
+  font-weight: 460;
+  color: var(--cp-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 22px;
 }
-
-#entry:drop(active) {
-  background-color: @lavender!important;
+/* selected text color override */
+#text:selected {
+  color: var(--cp-crust);
+}
+/* optional subtitle/subtext (if present) */
+#subtext {
+  font-size: 18px;
+  color: var(--cp-subtext0);
+  margin-left: 10px;
+}
+/* selected subtext contrast */
+#subtext:selected {
+  color: var(--cp-crust);
+}
+/* images/icons next to entry */
+#img {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  object-fit: cover;
+  filter: saturate(0.95);
+}
+/* hovered state (non-focused mouse hover) */
+#entry:hover {
+  background-color: var(--cp-surface1);
+}
+/* small footer / helper text styling (if used) */
+#footer {
+  margin-top: 15px;
+  color: var(--cp-overlay1);
+  font-size: 18px;
+  text-align: center;
+}
+/* Accessibility: keyboard focus ring for input */
+#input:focus {
+  box-shadow: 0 0 0 4px var(--cp-mauve);
 }
