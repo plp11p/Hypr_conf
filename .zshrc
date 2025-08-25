@@ -75,9 +75,10 @@ export BROWSER=firefox
 #alias fif='file=$(fzf --preview "bat --color=always {}") && [ -n "$file" ] && nvim "$file"'
 
 alias fif='file=$(fzf --preview "ls -l {} && echo && bat --color=always {}") && [ -n "$file" ] && nvim "$file"'
+alias fof='file=$(fzf) && [ -n "$file" ] && bat --style=plain --paging=never --color=always "$file" | fzf --ansi | wl-copy'
 
 
-# ──────────────────────────────────────────────
+#──────────────────────────────────────────────
 # Key bindings
 # ──────────────────────────────────────────────
 #bindkey '\e[1;5C' forward-word       # Ctrl + →
