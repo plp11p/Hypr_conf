@@ -5,7 +5,7 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "height": 42,
+    "height": 30,
     "modules-left": [
         "hyprland/workspaces"
     ],
@@ -14,11 +14,12 @@
     ],
     "modules-right": [
         "clock",
+        "battery"
     ],
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "1": "   1",
+            "1": "1",
             "2": "2",
             "3": "3",
             "4": "4",
@@ -37,10 +38,34 @@
         "spacing": 10
     },
     "clock": {
-	"format": " {:%H:%M    %a, %b %e}",
+	"format": " {:%H:%M  %a, %b %e}",
 	"tooltip-format": "<big>%Y %B</big>\n<tt>%a, %d %b %Y</tt>",
 	"interval": 60,
-	"format-alt": "{:%Y - %m - %d}"
+	"format-alt": "{:%Y-%m-%d}"
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 40,
+            "critical": 30
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            "󰂎",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ]
     },
   },
 }

@@ -1,9 +1,8 @@
 * {
   border: none;
-  border-radius: 0;
   font-family: "JetBrains Mono", "Font Awesome 6 Free", "Symbols Nerd Font";
   font-weight: bold;
-  font-size: 17px;
+  font-size: 22px;
   min-height: 0;
 }
 
@@ -13,68 +12,33 @@ window#waybar {
 }
 
 tooltip {
-  background: #1e1e2e;
-  border-radius: 8px;
-  border: 2px solid #11111b;
-}
-
-/* Workspaces */
-#workspaces {
-  background: #1e1e2e;
-  border-radius: 10px;
-  margin-left: 10px;
-  padding: 0 5px;
 }
 
 #workspaces button {
-  padding: 5px;
   color: #6c7086;
-  margin: 0 4px;
+  padding: 0px 21px;
 }
 
 #workspaces button.active {
-  background-color: #313244;
-  color: #f5e0dc;
-  border-radius: 8px;
+  color: #f9e2af;
 }
 
 #workspaces button.focused {
-  background: #f38ba8;
-  color: #1e1e2e;
-  border-radius: 8px;
+  color: #a6adc8;
 }
 
 #workspaces button.urgent {
-  background: #f9e2af;
-  color: #1e1e2e;
-  border-radius: 8px;
+  color: #f38ba8;
 }
 
 #workspaces button:hover {
-  background: #45475a;
-  color: #cdd6f4;
-  border-radius: 6px;
+  color: #313244;
 }
 
 /* Modules */
-#cpu,
-#temperature,
-#memory,
 #window,
 #clock,
-#battery,
-#pulseaudio,
-#network,
-#bluetooth,
 #tray,
-#backlight {
-  background: #1e1e2e;
-  padding: 0px 10px;
-  margin-top: 10px;
-  border: 1px solid #181825;
-  color: #cdd6f4;
-}
-
 #window {
   border-radius: 10px;
   margin-left: 60px;
@@ -82,81 +46,8 @@ tooltip {
 }
 
 #clock {
-  color: #fab387;
-  border-radius: 10px;
-  margin-left: 10px;
-  border-right: 0px;
-  font-size: 18px; /* Увеличенный шрифт */
-  padding: 0px 25px;
-  text-shadow: 0 0 0px #fab387;
-}
-
-
-#temperature {
-  color: #eba0ac;
-  border-radius: 10px 0 0 10px;
-  border-right: 0px;
-}
-
-#cpu {
-  color: #f5c2e7;
-  border-left: 0px;
-  border-right: 0px;
-}
-
-#memory {
-  color: #94e2d5;
-  border-left: 0px;
-  border-right: 0px;
-}
-
-#network {
-  color: #f9e2af;
-  border-left: 0px;
-  border-right: 0px;
-}
-
-#bluetooth {
-  color: #89b4fa;
-  border-radius: 0px 10px 10px 0px;
-  margin-right: 10px;
-}
-
-#pulseaudio {
-  color: #74c7ec;
-  border-left: 0px;
-  border-right: 0px;
-}
-
-#pulseaudio.microphone {
-  color: #cba6f7;
-  border-left: 0px;
-  border-right: 0px;
-  border-radius: 0px 10px 10px 0px;
-  margin-right: 10px;
-}
-
-#battery {
   color: #a6e3a1;
-  border-radius: 10px;
-  margin-right: 10px;
-  border-left: 0px;
-}
-
-#battery.warning {
-  color: #f9e2af;
-}
-
-#battery.critical {
-  color: #f38ba8;
 }
 
 #tray {
-  border-radius: 10px;
-  margin-right: 10px;
 }
-
-#backlight {
-  border-radius: 10px 0 0 10px;
-}
-
