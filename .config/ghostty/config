@@ -2,31 +2,21 @@ font-family = "JetBrains Mono"
 
 font-size = 22
 
-#background = #0F1114
-
 window-decoration = false
 
 theme = catppuccin-mocha
 
-#theme = "Monokai Pro"
-
-#font-style-bold = "Cascadia Code"
-
 shell-integration = zsh
-
-background-blur = true
-background-opacity = 0.8
 
 maximize = true
 
-title = "Terminal"
+title = "Ghostty"
 
 window-padding-balance = true
 
 cursor-style = "block"
 cursor-style-blink = false
 cursor-opacity = 0.5
-
 
 shell-integration-features = "no-cursor"
 
