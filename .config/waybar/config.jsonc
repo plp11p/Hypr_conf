@@ -5,42 +5,67 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "height": 42,
+    "height": 50,
     "modules-left": [
-        "hyprland/workspaces"
+        "clock",
     ],
     "modules-center": [
-        "hyprland/window"
+        "hyprland/workspaces"
     ],
     "modules-right": [
-        "clock",
+        "network",
+        "battery",
     ],
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "1": "   1",
-            "2": "2",
-            "3": "3",
-            "4": "4",
-            "5": "5",
-            "6": "6"
+            "1": " 1 ",
+            "2": " 2 ",
+            "3": " 3 ",
+            "4": " 4 ",
+            "5": " 5 ",
+            "6": " 6 "
         },
         "persistent_workspaces": {
             "*": 1
         }
     },
-    "hyprland/window": {
-        "format": "{}"
-    },
-    "tray": {
-        "icon-size": 18,
-        "spacing": 10
-    },
     "clock": {
-	"format": " {:%H:%M    %a, %b %e}",
+	"format": "    {:%H:%M  %a, %b %e}   ",
 	"tooltip-format": "<big>%Y %B</big>\n<tt>%a, %d %b %Y</tt>",
 	"interval": 60,
-	"format-alt": "{:%Y - %m - %d}"
+	"format-alt": "   {:%Y - %m - %d}  "
     },
-  },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 40,
+            "critical": 30
+        },
+        "format": "   {icon} {capacity}%   ",
+        "format-charging": "    {capacity}%   ",
+        "format-plugged": "    {capacity}%   ",
+        "format-alt": "   {time} {icon}   ",
+        "format-icons": [
+            "󰂎",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ]
+    },
+    "network": {
+        "format-wifi": "     {signalStrength}%  ",
+        "format-ethernet": "    {ipaddr}/{cidr}  ",
+        "tooltip-format": "   {essid} - {ifname} via {gwaddr}  ",
+        "format-linked": "   {ifname} (No IP)  ",
+        "format-disconnected": "   Disconnected ⚠  ",
+        "format-alt": "   {ifname}:{essid} {ipaddr}/{cidr}  "
+    },
 }

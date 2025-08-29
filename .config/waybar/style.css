@@ -1,26 +1,25 @@
 * {
-  border: none;
   font-family: "JetBrains Mono", "Font Awesome 6 Free", "Symbols Nerd Font";
   font-weight: bold;
   font-size: 22px;
-  min-height: 0;
 }
 
 window#waybar {
   background: transparent;
-  color: #cdd6f4;
-}
-
-tooltip {
 }
 
 #workspaces button {
+  margin-left: 24px;
+  padding: 5px 12px;
+  background: #1e1e2e;
+  border: 2px solid #181825;
+  border-radius: 15px;
   color: #6c7086;
-  padding: 0px 21px;
 }
 
 #workspaces button.active {
-  color: #f9e2af;
+  color: #f5c2e7;
+  background: #1C1C2C;
 }
 
 #workspaces button.focused {
@@ -32,22 +31,40 @@ tooltip {
 }
 
 #workspaces button:hover {
-  color: #313244;
+  color: #cdd6f4;
+  background: #313244;
 }
 
-/* Modules */
-#window,
-#clock,
-#tray,
-#window {
-  border-radius: 10px;
-  margin-left: 60px;
-  margin-right: 60px;
-}
-
+#battery,
+#network,
 #clock {
-  color: #a6e3a1;
+  background: #1e1e2e;
+  margin-left: 24px;
+  border: 2px solid #181825;
+  border-radius: 14px;
+  color: #f2cdcd;
 }
 
-#tray {
+#network {
+  background: #1e1e2e;
+  color: #f9e2af;
+  border: 2px solid #1e1e2e;
+  border-radius: 14px;
+}
+
+#battery {
+  background: #1e1e2e;
+  color: #a6e3a1;
+  border: 2px solid #1e1e2e;
+  border-radius: 14px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+#battery.warning {
+  color: #f9e2af;
+}
+
+#battery.critical {
+  color: #f38ba8;
 }
